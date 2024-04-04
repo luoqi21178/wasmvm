@@ -267,7 +267,7 @@ dependencies = [
 [[package]]
 name = "cosmwasm-crypto"
 version = "2.0.1"
-source = "git+https://github.com/CosmWasm/cosmwasm.git?branch=ibc-callbacks#582cd4d44216e9e26faf5318cb6c24b06338966b"
+source = "git+https://github.com/CosmWasm/cosmwasm.git?branch=ibc-callbacks#37cd833e5c0fd65c584f3133ff245d4da0be17f1"
 dependencies = [
  "digest",
  "ecdsa",
@@ -281,7 +281,7 @@ dependencies = [
 [[package]]
 name = "cosmwasm-derive"
 version = "2.0.1"
-source = "git+https://github.com/CosmWasm/cosmwasm.git?branch=ibc-callbacks#582cd4d44216e9e26faf5318cb6c24b06338966b"
+source = "git+https://github.com/CosmWasm/cosmwasm.git?branch=ibc-callbacks#37cd833e5c0fd65c584f3133ff245d4da0be17f1"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -291,7 +291,7 @@ dependencies = [
 [[package]]
 name = "cosmwasm-std"
 version = "2.0.1"
-source = "git+https://github.com/CosmWasm/cosmwasm.git?branch=ibc-callbacks#582cd4d44216e9e26faf5318cb6c24b06338966b"
+source = "git+https://github.com/CosmWasm/cosmwasm.git?branch=ibc-callbacks#37cd833e5c0fd65c584f3133ff245d4da0be17f1"
 dependencies = [
  "base64",
  "bech32",
@@ -312,7 +312,7 @@ dependencies = [
 [[package]]
 name = "cosmwasm-vm"
 version = "2.0.1"
-source = "git+https://github.com/CosmWasm/cosmwasm.git?branch=ibc-callbacks#582cd4d44216e9e26faf5318cb6c24b06338966b"
+source = "git+https://github.com/CosmWasm/cosmwasm.git?branch=ibc-callbacks#37cd833e5c0fd65c584f3133ff245d4da0be17f1"
 dependencies = [
  "bech32",
  "bytes",
