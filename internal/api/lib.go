@@ -698,7 +698,7 @@ func IBCPacketTimeout(
 	return copyAndDestroyUnmanagedVector(res), convertGasReport(gasReport), nil
 }
 
-func IBCSourceChainCallback(
+func IBCSourceCallback(
 	cache Cache,
 	checksum []byte,
 	env []byte,
@@ -732,7 +732,7 @@ func IBCSourceChainCallback(
 	var gasReport C.GasReport
 	errmsg := uninitializedUnmanagedVector()
 
-	res, err := C.ibc_source_chain_callback(cache.ptr, cs, e, msgBytes, db, a, q, cu64(gasLimit), cbool(printDebug), &gasReport, &errmsg)
+	res, err := C.ibc_source_callback(cache.ptr, cs, e, msgBytes, db, a, q, cu64(gasLimit), cbool(printDebug), &gasReport, &errmsg)
 	if err != nil && err.(syscall.Errno) != C.ErrnoValue_Success {
 		// Depending on the nature of the error, `gasUsed` will either have a meaningful value, or just 0.
 		return nil, convertGasReport(gasReport), errorWithMessage(err, errmsg)
@@ -740,7 +740,7 @@ func IBCSourceChainCallback(
 	return copyAndDestroyUnmanagedVector(res), convertGasReport(gasReport), nil
 }
 
-func IBCDestinationChainCallback(
+func IBCDestinationCallback(
 	cache Cache,
 	checksum []byte,
 	env []byte,
@@ -774,7 +774,7 @@ func IBCDestinationChainCallback(
 	var gasReport C.GasReport
 	errmsg := uninitializedUnmanagedVector()
 
-	res, err := C.ibc_destination_chain_callback(cache.ptr, cs, e, msgBytes, db, a, q, cu64(gasLimit), cbool(printDebug), &gasReport, &errmsg)
+	res, err := C.ibc_destination_callback(cache.ptr, cs, e, msgBytes, db, a, q, cu64(gasLimit), cbool(printDebug), &gasReport, &errmsg)
 	if err != nil && err.(syscall.Errno) != C.ErrnoValue_Success {
 		// Depending on the nature of the error, `gasUsed` will either have a meaningful value, or just 0.
 		return nil, convertGasReport(gasReport), errorWithMessage(err, errmsg)
